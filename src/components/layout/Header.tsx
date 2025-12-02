@@ -20,7 +20,7 @@ export function Header({ onCartClick, onWishlistClick }: HeaderProps) {
 
   const navItems = [
     { name: 'New Arrivals', href: '#' },
-    { name: 'Dresses', href: '#' },
+    { name: 'Dresses', href: '#/dresses' },
     { name: 'Tops', href: '#' },
     { name: 'Bottoms', href: '#' },
     { name: 'Outerwear', href: '#' },

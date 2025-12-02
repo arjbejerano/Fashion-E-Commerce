@@ -10,24 +10,28 @@ export function CategorySection() {
       image: '/placeholder.svg',
       description: 'Elegant dresses for every occasion',
       itemCount: '120+ items',
+      href: '#/dresses',
     },
     {
       name: 'Outerwear',
       image: '/placeholder.svg',
       description: 'Coats, jackets & blazers',
       itemCount: '85+ items',
+      href: '#',
     },
     {
       name: 'Shoes',
       image: '/placeholder.svg',
       description: 'From heels to sneakers',
       itemCount: '200+ items',
+      href: '#',
     },
     {
       name: 'Accessories',
       image: '/placeholder.svg',
       description: 'Bags, jewelry & more',
       itemCount: '150+ items',
+      href: '#',
     },
   ];
 
@@ -45,10 +49,10 @@ export function CategorySection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
-            <Card 
-              key={category.name} 
-              className="group cursor-pointer overflow-hidden border-0 shadow-sm hover:shadow-lg transition-all duration-300"
-            >
+            <a href={category.href} key={category.name}>
+              <Card 
+                className="group cursor-pointer overflow-hidden border-0 shadow-sm hover:shadow-lg transition-all duration-300"
+              >
               <div className="relative overflow-hidden">
                 <img
                   src={category.image}
@@ -68,7 +72,8 @@ export function CategorySection() {
                   <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
-            </Card>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
